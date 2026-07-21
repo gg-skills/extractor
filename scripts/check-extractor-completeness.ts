@@ -6,7 +6,7 @@
  * Verifies an extraction operation against the 8-item Extractor Quality Checklist.
  * 
  * Usage:
- *   npx tsx skills/extractor/scripts/check-extractor-completeness.ts --phase <phase>
+ *   npx tsx .agents/skills/extractor/scripts/check-extractor-completeness.ts --phase <phase>
  */
 
 import { argv } from "process";

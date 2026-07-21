@@ -42,7 +42,7 @@ For a direct command lookup, see [Quick Commands](#quick-commands) below.
 gh auth status
 
 # Scan repo for references to a skill name
-npx tsx skills/extractor/scripts/scan-references.ts --target <folder-name>
+npx tsx .agents/skills/extractor/scripts/scan-references.ts --target <folder-name>
 
 # Initialize repo inside skill folder and push to GitHub
 cd skills/<name>

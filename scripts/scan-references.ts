@@ -7,7 +7,7 @@
  * the user before rewriting.
  *
  * Usage:
- *   npx tsx skills/extractor/scripts/scan-references.ts --target <folder-name>
+ *   npx tsx .agents/skills/extractor/scripts/scan-references.ts --target <folder-name>
  *
  * The script intentionally errs on the side of recall (more variants, more hits).
  * The agent must apply judgment to the output.

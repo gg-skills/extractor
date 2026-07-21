@@ -22,7 +22,7 @@ grep <name> .gitmodules
 
 ```bash
 # Find all references to a skill name across the repo
-npx tsx skills/extractor/scripts/scan-references.ts --target <folder-name>
+npx tsx .agents/skills/extractor/scripts/scan-references.ts --target <folder-name>
 ```
 
 ## Repo creation
@@ -67,7 +67,7 @@ Run these from the repo root after extraction if the target is a GG skill:
 
 ```bash
 # Generate icons
-npx tsx skills/skills-manager/scripts/generate-icons.ts \
+npx tsx .agents/skills/skills-manager/scripts/generate-icons.ts \
   --skill skills/<name>
 
 # Validate structure and shared checks

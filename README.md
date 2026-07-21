@@ -70,7 +70,7 @@ The skill drives the following tools — Claude Code runs these via Bash; no man
 | `git mv <old> <new>` | Rename the folder in the host repo when a rename is requested |
 | `git submodule add <repo-url> skills/<name>` | Re-add the skill as a submodule (submodule mode only) |
 | `rm -rf skills/<name>` | Remove the working tree before submodule add (submodule mode only) |
-| `npx tsx skills/extractor/scripts/scan-references.ts --target <name>` | Find all references to the skill name across the repo before renaming |
+| `npx tsx .agents/skills/extractor/scripts/scan-references.ts --target <name>` | Find all references to the skill name across the repo before renaming |
 | `sed` / file edits | Rewrite approved reference hits after the user confirms categorization |
 
 ### Side effects
