@@ -42,6 +42,7 @@ For a direct command lookup, see [Quick Commands](#quick-commands) below.
 gh auth status
 
 # Scan repo for references to a skill name
+# Runner alternatives: bunx tsx / pnpm dlx tsx / deno run -A npm:tsx / node --import tsx / yarn dlx tsx
 npx tsx .agents/skills/extractor/scripts/scan-references.ts --target <folder-name>
 
 # Initialize repo inside skill folder and push to GitHub
@@ -288,3 +289,5 @@ The `references/` folder contains **3 files** (no subfolders):
 - `assets/icon-prompt.txt` — Prompt used to generate the icon. Generated via `skills-manager/SKILL.md`.
 - `assets/icon-summary.txt` — Summary prompt for icon generation. Generated via `skills-manager/SKILL.md`.
 - `assets/icon-metaphor.txt` — Metaphor prompt for icon generation. Generated via `skills-manager/SKILL.md`.
+
+[^rt]: `npx tsx` accepts any standard runner — `bunx tsx`, `pnpm dlx tsx`, `deno run -A npm:tsx`, `node --import tsx`, or `yarn dlx tsx`. The first five auto-fetch `tsx` on demand; only `node --import tsx` requires `tsx` to be installed locally first (`npm i -D tsx`, or `npm i -g tsx` if you cannot reach the npm registry). Bun users can also skip `tsx` entirely and run TypeScript directly via `bun <script>`. Pick whichever your project ships. The canonical runtime decision table lives in the `skills-manager` skill under `Runtime Selection` (only available when working in the full `gg-skills` monorepo).
