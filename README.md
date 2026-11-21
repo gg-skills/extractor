@@ -26,7 +26,7 @@ mkdir -p ~/.claude/skills
 git -C ~/.claude/skills clone git@github.com:gg-skills/extractor.git
 ```
 
-Restart your agent or reload skills after installation. See the parent [`skills` catalog repo](https://github.com/gg-skills/skills) for the full catalog.
+Restart your agent or reload skills after installation. Browse public skills on the [GG Skills organization profile](https://github.com/gg-skills).
 
 ## When to use
 
@@ -115,7 +115,7 @@ flowchart TD
     M --> P[git status · push host repo\ngh repo view · summarize]
     O --> P
     P --> Q{GG skill?}
-    Q -->|yes| R[Delegate to skills-manager/SKILL.md\nicon generation · structure validation]
+    Q -->|yes| R[Hand off to the project’s skill-management tool\nicon generation · structure validation]
     Q -->|no| S([Done])
     R --> S
 ```
@@ -166,7 +166,7 @@ cp skills/extractor/.env.example skills/extractor/.env
 - [`references/quick-reference.md`](references/quick-reference.md) — all `gh`, `git`, and scan commands in one place.
 - [`references/configuration.md`](references/configuration.md) — `.env` variable reference and behavior rules.
 - [`references/troubleshooting.md`](references/troubleshooting.md) — failure-mode matrix with symptoms and recovery steps.
-- [`gg-skills` repo](https://github.com/gg-skills/skills) — parent catalog and bootstrap pattern.
+- [GG Skills](https://github.com/gg-skills) — public examples of the standalone skill structure.
 
 ## Caveats
 
@@ -175,4 +175,4 @@ cp skills/extractor/.env.example skills/extractor/.env
 - **Reference rewriting requires human review.** The scan script finds all hits but the agent categorizes and the user approves before any file is modified. Slugs that appear as substrings of unrelated identifiers (e.g. `my-skill-config`) require a judgment call.
 - **Reference scan > 100 hits.** The agent pauses and asks before continuing — the slug is likely too generic.
 - **This skill is gitignored from `gg-skills`.** It is intentionally excluded from the skills sync system and lives only on the user's machine.
-- **Post-extraction validation is delegated.** Icon generation and skill structure validation are handled by `skills-manager/SKILL.md`, not by this skill.
+- **Post-extraction validation is delegated.** Hand off icon generation and skill structure validation to the project’s skill-management tool.

@@ -61,15 +61,12 @@ git status
 gh repo view <owner>/<name>
 ```
 
-## Post-extraction validation (delegate to `skills-manager/SKILL.md`)
+## Post-extraction validation
 
-Run these from the repo root after extraction if the target is a GG skill:
+For a GG skill, have the project’s skill-management tool generate icons for
+`skills/<name>` when needed and run these checks from the repo root:
 
 ```bash
-# Generate icons
-npx tsx .agents/skills/skills-manager/scripts/generate-icons.ts \
-  --skill skills/<name>
-
 # Validate structure and shared checks
 npm run skills:manager:validate -- skills/<name>
 npm run check:skills-assets
